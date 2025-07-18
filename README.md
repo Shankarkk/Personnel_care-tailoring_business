@@ -49,8 +49,9 @@ Expense vs income trend for decision support
 
 
 ---
-
+## 🗂️ Project Structure
 📦 personnel_care_tailoring_business/  
+
 ├── models/  
 │   ├── staging/              # Raw service and appointment data  
 │   ├── intermediate/         # Business logic layer (e.g., active customers, expenses)  
