@@ -52,16 +52,17 @@ Expense vs Income trend for decision support
 
 ---
 
-📂 Project Structure
-
+personnel_care_tailoring_business/
 ├── models/
-│   ├── staging/
-│   ├── intermediate/
-│   ├── marts/
-│   └── snapshots/
-├── seeds/
-├── dbt_project.yml
-├── README.md
+│   ├── staging/              # Raw service and appointment data
+│   ├── intermediate/         # Business logic layer (e.g., active customers, expenses)
+│   ├── marts/                # Final reporting tables (service_summary, appointment_trends)
+├── tests/                    # dbt test cases (not_null, unique)
+├── snapshots/                # Snapshots if applicable
+├── macros/                   # Custom dbt macros (optional)
+├── dbt_project.yml           # Project configuration
+├── packages.yml              # dbt dependencies
+└── README.md                 # Documentation
 
 
 ---
