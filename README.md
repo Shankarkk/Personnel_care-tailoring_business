@@ -2,7 +2,6 @@
 
 This project focuses on building a real-time analytics pipeline for a small-scale personal care (beauty parlour) and tailoring business. It captures services, appointments, and expenses, transforming raw service logs into a structured Snowflake data mart for business decision-making.
 
-
 ---
 
 📌 Project Overview
@@ -19,9 +18,6 @@ Daily/weekly/monthly revenue analysis
 
 Expense tracking and profitability
 
-
-
-
 ---
 
 ⚙️ Tech Stack
@@ -34,8 +30,6 @@ Snowflake Tasks & Streams – For automation and change capture
 
 Excel / Manual Logs – Raw data simulation (could be extended to S3/ADF)
 
-
-
 ---
 
 ✅ Key Features
@@ -47,8 +41,6 @@ Revenue by service category and stylist/tailor
 Automated appointment ingestion using scheduled tasks
 
 Expense vs Income trend for decision support
-
-
 
 ---
 
@@ -63,7 +55,6 @@ personnel_care_tailoring_business/
 ├── dbt_project.yml           # Project configuration
 ├── packages.yml              # dbt dependencies
 └── README.md                 # Documentation
-
 
 ---
 
