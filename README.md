@@ -1,73 +1,69 @@
-🧵 Personal Care & Tailoring Business Insights
+💄🧵 **Personal Care Business Analytics** (`personalcare-analytics`)
 
-This project focuses on building a real-time analytics pipeline for a small-scale personal care (beauty parlour) and tailoring business. It captures services, appointments, and expenses, transforming raw service logs into a structured Snowflake data mart for business decision-making.
+A real-world data project designed to **track and analyze** customer visits, service usage, and tailoring orders for a **small-scale personal care business**, combining beauty parlour and tailoring services. Powered by **Snowflake**, **dbt**, and **CI/CD automation** for clean, testable analytics.
+
+---
+
+## 🔧 **Tech Stack**
+
+- **Snowflake** – Central data warehouse (staging → intermediate → mart)
+- **dbt Cloud** – ELT modeling with Jinja + built-in tests
+- **GitHub** – Versioning and CI/CD integration
+- **SQL + dbt Tests** – Business rules and validation
+- *(Optional: GSheets, CSV or ADF for data load)*
+
+---
+
+## 🧩 **Key Features**
+
+- 💇 **Service analytics** for beauty parlour (facial, hair spa, bridal packages, etc.)  
+- 🧵 **Tailoring service tracking** (orders, delivery time, type of stitch)  
+- 🧍 **Customer frequency and category insights**  
+- ✅ **Tested models** with dbt `unique`, `not_null`, `accepted_values`  
+- 🔁 **Incremental models** for growing data (daily/weekly visits)
+
+---
+
+## 📁 **Project Structure**
+
+```bash
+personalcare-analytics/
+├── models/
+│   ├── staging/             # Raw input (appointments, services, tailoring)
+│   ├── intermediate/        # Calculated visits, service counts, time logic
+│   └── marts/               # Final metrics: customer ranking, popular services
+├── tests/                   # dbt schema + data quality checks
+├── macros/                  # Jinja for date logic or categorization (optional)
+├── dbt_project.yml          # Core dbt config
+├── packages.yml             # dbt dependencies
+└── README.md                # Documentation
 
 
 ---
 
-📌 Project Overview
+📊 Business Impact
 
-Designed and implemented a mini data mart in Snowflake using dbt for a local tailoring and beauty services business.
-Captured and transformed data for:
+🔍 Understood which services generate more income
 
-Customer appointments (hair, facial, stitching, etc.)
+⏱️ Tracked turnaround time for tailoring orders
 
-Service history and trends
+📅 Identified peak customer days/times
 
-Daily/weekly/monthly revenue analysis
+🧠 Enabled better service combos based on usage patterns
 
-Expense tracking and profitability
-
-
-
----
-
-⚙️ Tech Stack
-
-Snowflake – Cloud Data Warehouse
-
-dbt (Data Build Tool) – Transformation logic (staging → mart)
-
-Snowflake Tasks & Streams – For automation and change capture
-
-Excel / Manual Logs – Raw data simulation (can be extended to S3/ADF)
+📈 Increased repeat customer visits through frequency insights
 
 
 
 ---
 
-✅ Key Features
+👤 Author
 
-Customer frequency tracking (weekly/monthly visit patterns)
+Shankar Kamalakannan
+Freelance Snowflake + dbt Developer
 
-Revenue by service category and stylist/tailor
-
-Automated appointment ingestion using scheduled tasks
-
-Expense vs income trend for decision support
-
-
+📱 Mobile: +91-95976 45086
+📧 Email: shankar.freelance.dataengineer@gmail.com
+🔗 GitHub: https://github.com/shankarkk
 
 ---
-## 🗂️ Project Structure
-📦 personnel_care_tailoring_business/  
-
-├── models/  
-│   ├── staging/              # Raw service and appointment data  
-│   ├── intermediate/         # Business logic layer (e.g., active customers, expenses)  
-│   ├── marts/                # Final reporting tables (service_summary, appointment_trends)  
-├── tests/                    # dbt test cases (not_null, unique)  
-├── snapshots/                # Snapshots if applicable  
-├── macros/                   # Custom dbt macros (optional)  
-├── dbt_project.yml           # Project configuration  
-├── packages.yml              # dbt dependencies  
-└── README.md                 # Documentation
----
-
-📈 Business Impact
-
-Enabled the business owner to track which services are most in-demand, peak customer hours, and daily revenue trends.
-
-Helped monitor profit margins by comparing services rendered vs expenses incurred.
-
-Provided insights for marketing and seasonal offers planning.
